@@ -30,9 +30,9 @@ export default class MyVueRouter {
                 this.history = new AbstractHistory(this, options.base)
                 break
             default:
-                if (process.env.NODE_ENV !== 'production') {
-                    assert(false, `invalid mode: ${mode}`)
-                }
+                // if (process.env.NODE_ENV !== 'production') {
+                //     assert(false, `invalid mode: ${mode}`)
+                // }
         }
     }
 
@@ -47,4 +47,7 @@ export default class MyVueRouter {
 
 }
 MyVueRouter.install = install;
+if(inBrowser && window.Vue){
+    Vue.use(MyVueRouter)
+}
 

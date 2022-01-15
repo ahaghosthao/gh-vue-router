@@ -1,3 +1,6 @@
+import Link from "./components/link";
+import View from "./components/view";
+
 export let _Vue
 export function install (Vue) {
     if (install.installed && _Vue === Vue) return
@@ -20,4 +23,9 @@ export function install (Vue) {
             // registerInstance(this)
         }
     })
+
+    Vue.component('RouterView', View)
+    Vue.component('RouterLink', Link)
+    console.log(1111)
 }
+
