@@ -10,7 +10,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "path-to-regexp": "^1.7.0"
+  },
   "devDependencies": {
     "rollup": "^1.20.1",
     "terser": "^4.8.0"
